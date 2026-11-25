@@ -1,0 +1,193 @@
+{
+  "aviso": "DATOS 100% INVENTADOS para demostración. No usar en producción.",
+  "fuente_build": "El build de la demo usa mock-fixtures.json; este archivo es un ejemplo/dataset auxiliar ficticio.",
+  "personas": [
+    {
+      "nombre": "Persona Demo 01",
+      "apellidos": "Alfa Prueba",
+      "nombre_completo": "Persona Demo 01 Alfa Prueba",
+      "correo": "persona01@demo.invalid",
+      "dni": "DEMO-001",
+      "titulacion": "Grado de Demostración A",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 02",
+      "apellidos": "Beta Prueba",
+      "nombre_completo": "Persona Demo 02 Beta Prueba",
+      "correo": "",
+      "dni": "DEMO-002",
+      "titulacion": "Grado de Demostración B",
+      "nota_demo": "Sin correo"
+    },
+    {
+      "nombre": "Persona Demo 03",
+      "apellidos": "Gamma Prueba",
+      "nombre_completo": "Persona Demo 03 Gamma Prueba",
+      "correo": "persona03@@demo.invalid",
+      "dni": "DEMO-003",
+      "titulacion": "Grado de Demostración C",
+      "nota_demo": "Correo mal escrito"
+    },
+    {
+      "nombre": "Persona Demo 04",
+      "apellidos": "Delta Prueba",
+      "nombre_completo": "Persona Demo 04 Delta Prueba",
+      "correo": "persona04@demo.invalid",
+      "dni": "DEMO-004",
+      "titulacion": "Grado de Demostración D",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 05",
+      "apellidos": "Épsilon Prueba",
+      "nombre_completo": "Persona Demo 05 Épsilon Prueba",
+      "correo": "persona05@demo.invalid",
+      "dni": "DEMO-005",
+      "titulacion": "Grado de Demostración E",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 06",
+      "apellidos": "Zeta Prueba",
+      "nombre_completo": "Persona Demo 06 Zeta Prueba",
+      "correo": "persona06@demo.invalid",
+      "dni": "DEMO-006",
+      "titulacion": "Grado de Demostración F",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Ñandú Árbol Demo",
+      "apellidos": "Valenzuela-Castellanos de la Fuente y Montserrat de Prueba",
+      "nombre_completo": "Ñandú Árbol Demo Valenzuela-Castellanos de la Fuente y Montserrat de Prueba",
+      "correo": "nanduarbol.demo@demo.invalid",
+      "dni": "DEMO-007",
+      "titulacion": "Doble Grado de Demostración Largo con Ñ y Tildes",
+      "nota_demo": "Nombre largo con tildes y ñ"
+    },
+    {
+      "nombre": "Persona Demo 08",
+      "apellidos": "Eta Prueba",
+      "nombre_completo": "Persona Demo 08 Eta Prueba",
+      "correo": "persona08@demo.invalid",
+      "dni": "DEMO-008",
+      "titulacion": "Grado de Demostración G",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 09",
+      "apellidos": "Theta Prueba",
+      "nombre_completo": "Persona Demo 09 Theta Prueba",
+      "correo": "persona09@demo.invalid",
+      "dni": "DEMO-009",
+      "titulacion": "Grado de Demostración H",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 10",
+      "apellidos": "Iota Prueba",
+      "nombre_completo": "Persona Demo 10 Iota Prueba",
+      "correo": "persona10@demo.invalid",
+      "dni": "DEMO-010",
+      "titulacion": "Grado de Demostración I",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 11",
+      "apellidos": "Kappa Prueba",
+      "nombre_completo": "Persona Demo 11 Kappa Prueba",
+      "correo": "persona11@demo.invalid",
+      "dni": "DEMO-011",
+      "titulacion": "Grado de Demostración J",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 12",
+      "apellidos": "Lambda Prueba",
+      "nombre_completo": "Persona Demo 12 Lambda Prueba",
+      "correo": "persona12@demo.invalid",
+      "dni": "DEMO-012",
+      "titulacion": "Grado de Demostración K",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 13",
+      "apellidos": "Mu Prueba",
+      "nombre_completo": "Persona Demo 13 Mu Prueba",
+      "correo": "persona13@demo.invalid",
+      "dni": "DEMO-013",
+      "titulacion": "Grado de Demostración L",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 14",
+      "apellidos": "Nu Prueba",
+      "nombre_completo": "Persona Demo 14 Nu Prueba",
+      "correo": "persona14@demo.invalid",
+      "dni": "DEMO-014",
+      "titulacion": "Grado de Demostración M",
+      "nota_demo": "Caso base correcto"
+    },
+    {
+      "nombre": "Persona Demo 15",
+      "apellidos": "Xi Prueba",
+      "nombre_completo": "Persona Demo 15 Xi Prueba",
+      "correo": "persona15@demo.invalid",
+      "dni": "DEMO-015",
+      "titulacion": "Grado de Demostración N",
+      "nota_demo": "Caso base correcto"
+    }
+  ],
+  "eventos": [
+    {
+      "nombre": "Jornada de Demostración Estudiantil 2026",
+      "fecha": "12 de noviembre de 2026",
+      "horario": "de 09:30 a 14:00",
+      "lugar": "Salón de Actos de Demostración",
+      "firmantes": [
+        {
+          "nombre": "Firmante Demo A",
+          "cargo": "Coordinación de Demostración"
+        },
+        {
+          "nombre": "Firmante Demo B",
+          "cargo": "Secretaría de Demostración"
+        }
+      ]
+    },
+    {
+      "nombre": "Taller de Demostración y Participación 2026",
+      "fecha": "25 de noviembre de 2026",
+      "horario": "de 16:00 a 19:00",
+      "lugar": "Aula Magna de Demostración",
+      "firmantes": [
+        {
+          "nombre": "Firmante Demo C",
+          "cargo": "Vocalía de Demostración"
+        },
+        {
+          "nombre": "Firmante Demo D",
+          "cargo": "Coordinación Adjunta de Demostración"
+        }
+      ]
+    }
+  ],
+  "textos_por_defecto": {
+    "certificados": {
+      "asunto": "Tu certificado de {evento}",
+      "cuerpo": "Hola {nombre_pila}:\n\nGracias por participar en «{evento}». Te adjuntamos tu certificado.\n\nUn saludo,\n{firmante}\n{organizador}"
+    },
+    "justificantes": {
+      "asunto": "Tu justificante de {evento}",
+      "cuerpo": "Hola {nombre_pila}:\n\nTe adjuntamos el justificante de tu participación en «{evento}».\n\nUn saludo,\n{firmante}\n{organizador}"
+    },
+    "ya_creados": {
+      "asunto": "Certificado de reconocimiento de créditos",
+      "cuerpo": "Hola {nombre_pila}:\n\nTe adjuntamos tu certificado de reconocimiento de créditos ({cargos}) emitido por la Universitat Politècnica de València. Guárdalo, ya que lo necesitarás para solicitar el reconocimiento.\n\nGracias por tu implicación.\n\nUn saludo,\n{firmante}\n{organizador}"
+    },
+    "solo_correo": {
+      "asunto": "Confirmación de inscripción: {evento}",
+      "cuerpo": "Hola {nombre_pila}:\n\nTe confirmamos tu inscripción en «{evento}».\n\nFecha: {fecha}\nHorario: {horario}\nLugar: {lugar}\n\nSi finalmente no puedes asistir, respóndenos a este correo para que podamos liberar tu plaza.\n\n¡Nos vemos!\n\nUn saludo,\n{organizador}"
+    }
+  }
+}

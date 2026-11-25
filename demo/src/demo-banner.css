@@ -1,0 +1,8 @@
+#demo-banner{position:fixed;inset:0 0 auto;z-index:1000;padding:8px 12px;background:var(--acc-soft);color:var(--ink);border-bottom:1px solid var(--line);font:600 14px/1.5 var(--f-texto,system-ui);text-align:center;overflow-wrap:anywhere}
+html{scroll-padding-top:calc(var(--demo-banner-height,64px) + 8px)}
+body{padding-top:var(--demo-banner-height,64px)!important;box-sizing:border-box}
+.app{height:calc(100vh - var(--demo-banner-height,64px))}
+@media(max-width:760px){.app{height:auto;min-height:calc(100vh - var(--demo-banner-height,64px))}nav{top:var(--demo-banner-height,64px);max-height:calc(100vh - var(--demo-banner-height,64px))}}
+#demo-downloads{border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--ink);max-width:min(640px,calc(100vw - 32px));max-height:75vh;overflow:auto;padding:16px}
+#demo-downloads a,#demo-downloads button{display:block;margin:8px 0;padding:8px;border-radius:4px;min-height:44px;box-sizing:border-box}
+#demo-downloads a:focus-visible,#demo-downloads button:focus-visible{outline:2px solid var(--acc);outline-offset:2px}

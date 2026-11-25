@@ -1,0 +1,143 @@
+{
+  "aviso": "Simulación de envío con datos ficticios. No representa envíos reales.",
+  "fuente_build": "El build de la demo usa mock-fixtures.json; este archivo es un ejemplo/dataset auxiliar ficticio.",
+  "envio_simulado": {
+    "id": "demo-envio-001",
+    "fecha_simulada": "2026-11-26T10:15:00+01:00",
+    "evento": "Jornada de Demostración Estudiantil 2026",
+    "total_personas": 15
+  },
+  "resultados": [
+    {
+      "nombre_completo": "Persona Demo 01 Alfa Prueba",
+      "correo": "persona01@demo.invalid",
+      "dni": "DEMO-001",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 02 Beta Prueba",
+      "correo": "",
+      "dni": "DEMO-002",
+      "estado": "saltado",
+      "detalle": "Saltado por no tener correo."
+    },
+    {
+      "nombre_completo": "Persona Demo 03 Gamma Prueba",
+      "correo": "persona03@@demo.invalid",
+      "dni": "DEMO-003",
+      "estado": "rebotado",
+      "motivo": "Dominio mal escrito."
+    },
+    {
+      "nombre_completo": "Persona Demo 04 Delta Prueba",
+      "correo": "persona04@demo.invalid",
+      "dni": "DEMO-004",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 05 Épsilon Prueba",
+      "correo": "persona05@demo.invalid",
+      "dni": "DEMO-005",
+      "estado": "fallido",
+      "motivo": "Error temporal del servicio de envío simulado."
+    },
+    {
+      "nombre_completo": "Persona Demo 06 Zeta Prueba",
+      "correo": "persona06@demo.invalid",
+      "dni": "DEMO-006",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Ñandú Árbol Demo Valenzuela-Castellanos de la Fuente y Montserrat de Prueba",
+      "correo": "nanduarbol.demo@demo.invalid",
+      "dni": "DEMO-007",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 08 Eta Prueba",
+      "correo": "persona08@demo.invalid",
+      "dni": "DEMO-008",
+      "estado": "rebotado",
+      "motivo": "Buzón lleno."
+    },
+    {
+      "nombre_completo": "Persona Demo 09 Theta Prueba",
+      "correo": "persona09@demo.invalid",
+      "dni": "DEMO-009",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 10 Iota Prueba",
+      "correo": "persona10@demo.invalid",
+      "dni": "DEMO-010",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 11 Kappa Prueba",
+      "correo": "persona11@demo.invalid",
+      "dni": "DEMO-011",
+      "estado": "rebotado",
+      "motivo": "Dirección inexistente."
+    },
+    {
+      "nombre_completo": "Persona Demo 12 Lambda Prueba",
+      "correo": "persona12@demo.invalid",
+      "dni": "DEMO-012",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 13 Mu Prueba",
+      "correo": "persona13@demo.invalid",
+      "dni": "DEMO-013",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 14 Nu Prueba",
+      "correo": "persona14@demo.invalid",
+      "dni": "DEMO-014",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    },
+    {
+      "nombre_completo": "Persona Demo 15 Xi Prueba",
+      "correo": "persona15@demo.invalid",
+      "dni": "DEMO-015",
+      "estado": "enviado",
+      "detalle": "Mensaje entregado correctamente en simulación."
+    }
+  ],
+  "mensajes_progreso": [
+    "Preparando envío simulado para 15 personas...",
+    "Validando direcciones de correo...",
+    "1/15: Persona Demo 01 Alfa Prueba — enviado.",
+    "2/15: Persona Demo 02 Beta Prueba — saltado por no tener correo.",
+    "3/15: Persona Demo 03 Gamma Prueba — rebotado: dominio mal escrito.",
+    "4/15: Persona Demo 04 Delta Prueba — enviado.",
+    "5/15: Persona Demo 05 Épsilon Prueba — fallido por error temporal.",
+    "6/15: Persona Demo 06 Zeta Prueba — enviado.",
+    "7/15: Ñandú Árbol Demo Valenzuela-Castellanos de la Fuente y Montserrat de Prueba — enviado.",
+    "8/15: Persona Demo 08 Eta Prueba — rebotado: buzón lleno.",
+    "9/15: Persona Demo 09 Theta Prueba — enviado.",
+    "10/15: Persona Demo 10 Iota Prueba — enviado.",
+    "11/15: Persona Demo 11 Kappa Prueba — rebotado: dirección inexistente.",
+    "12/15: Persona Demo 12 Lambda Prueba — enviado.",
+    "13/15: Persona Demo 13 Mu Prueba — enviado.",
+    "14/15: Persona Demo 14 Nu Prueba — enviado.",
+    "15/15: Persona Demo 15 Xi Prueba — enviado.",
+    "Simulación finalizada: 10 enviados, 1 saltado, 1 fallido, 3 rebotados."
+  ],
+  "resumen": {
+    "enviados": 10,
+    "saltados": 1,
+    "fallidos": 1,
+    "rebotados": 3
+  }
+}

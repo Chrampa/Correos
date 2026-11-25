@@ -1,0 +1,11 @@
+{
+  "name": "demo-web-estatica",
+  "private": true,
+  "scripts": {
+    "build": "node build-demo.js",
+    "test": "node tests/build.test.js",
+    "test:browser": "node tests/browser.test.js",
+    "test:all": "node tests/build.test.js && node tests/mock-api.test.js && node tests/browser.test.js && node tests/mobile.test.js",
+    "serve": "node serve.js"
+  }
+}

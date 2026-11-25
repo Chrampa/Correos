@@ -1,55 +1,55 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Muestra del sistema de diseño</title>
+<title>Muestra del sistema de diseÃ±o</title>
 <style>
 /* ==== tokens.css (copia incrustada) ==== */
 /* =====================================================================
-   Envío de certificados · tokens de diseño  (v1, 2026-11-25)
+   EnvÃ­o de certificados Â· tokens de diseÃ±o  (v1, 2026-11-25)
    Sustituye al bloque :root actual de ui/index.html.
    - Los nombres antiguos (--bg --panel --ink --muted --line --soft --acc
      --acc-ink --acc-soft --ok --ok-soft --warn --warn-soft --bad --bad-soft --r)
-     se conservan como alias, así que el CSS existente sigue funcionando.
-   - Contrastes comprobados (WCAG 2.1, fórmula de luminancia relativa):
-     ver trabajo/diseno/SISTEMA.md §3.
+     se conservan como alias, asÃ­ que el CSS existente sigue funcionando.
+   - Contrastes comprobados (WCAG 2.1, fÃ³rmula de luminancia relativa):
+     ver trabajo/diseno/SISTEMA.md Â§3.
    ===================================================================== */
 :root{
-  /* ---- Color base 1 · ACENTO (acciones, selección, foco, enlaces) ---- */
-  --azul-700:#183f63;   /* hover/pulsado del botón principal  · blanco encima 10.88:1 */
-  --azul-600:#1f4e79;   /* acento                              · blanco 8.66:1 · sobre --bg 7.94:1 */
-  --azul-800:#173b5c;   /* texto sobre --azul-50                · 9.90:1 */
-  --azul-50:#e8eef5;    /* fondo suave de selección / aviso informativo */
+  /* ---- Color base 1 Â· ACENTO (acciones, selecciÃ³n, foco, enlaces) ---- */
+  --azul-700:#183f63;   /* hover/pulsado del botÃ³n principal  Â· blanco encima 10.88:1 */
+  --azul-600:#1f4e79;   /* acento                              Â· blanco 8.66:1 Â· sobre --bg 7.94:1 */
+  --azul-800:#173b5c;   /* texto sobre --azul-50                Â· 9.90:1 */
+  --azul-50:#e8eef5;    /* fondo suave de selecciÃ³n / aviso informativo */
 
-  /* ---- Color base 2 · ESTADO (completado, correcto, progreso terminado) ---- */
-  --verde-600:#13704f;  /* «hecho», «enviado», paso completado · blanco 6.07:1 · sobre blanco 6.07:1 */
-  --verde-800:#0f5c41;  /* texto sobre --verde-50               · 7.01:1 */
+  /* ---- Color base 2 Â· ESTADO (completado, correcto, progreso terminado) ---- */
+  --verde-600:#13704f;  /* Â«hechoÂ», Â«enviadoÂ», paso completado Â· blanco 6.07:1 Â· sobre blanco 6.07:1 */
+  --verde-800:#0f5c41;  /* texto sobre --verde-50               Â· 7.01:1 */
   --verde-50:#e6f3ed;
 
-  /* ---- Semánticos de aviso y error (solo para estados, nunca decoración) ---- */
-  --ambar-600:#8a5a00;  /* aviso · sobre --ambar-50 5.39:1 · sobre blanco ≈5.9:1 */
+  /* ---- SemÃ¡nticos de aviso y error (solo para estados, nunca decoraciÃ³n) ---- */
+  --ambar-600:#8a5a00;  /* aviso Â· sobre --ambar-50 5.39:1 Â· sobre blanco â‰ˆ5.9:1 */
   --ambar-800:#6b4600;  /* texto sobre --ambar-50 7.63:1 */
   --ambar-50:#fdf3e1;
-  --rojo-600:#b42318;   /* error / acción destructiva · blanco 6.57:1 · sobre --rojo-50 5.75:1 */
+  --rojo-600:#b42318;   /* error / acciÃ³n destructiva Â· blanco 6.57:1 Â· sobre --rojo-50 5.75:1 */
   --rojo-800:#8a1c12;   /* texto sobre --rojo-50 8.15:1 */
   --rojo-50:#fdeceb;
 
-  /* ---- Neutros (gris ligeramente frío, a juego con el azul) ---- */
+  /* ---- Neutros (gris ligeramente frÃ­o, a juego con el azul) ---- */
   --gris-0:#ffffff;     /* superficie de paneles y campos */
   --gris-25:#f7f8fa;    /* zona de arrastre, filas alternas */
-  --gris-50:#f4f5f7;    /* fondo de la aplicación */
+  --gris-50:#f4f5f7;    /* fondo de la aplicaciÃ³n */
   --gris-75:#eef0f3;    /* cabecera de tabla, cifras */
   --gris-100:#e1e4e9;   /* separadores (decorativos) */
-  --gris-300:#868e9a;   /* borde de campos y botones secundarios · 3.31:1 sobre blanco (WCAG 1.4.11) */
-  --gris-600:#5b6472;   /* texto secundario · 5.98:1 blanco · 5.48:1 --gris-50 */
-  --gris-900:#1d2129;   /* texto principal · 16.13:1 */
+  --gris-300:#868e9a;   /* borde de campos y botones secundarios Â· 3.31:1 sobre blanco (WCAG 1.4.11) */
+  --gris-600:#5b6472;   /* texto secundario Â· 5.98:1 blanco Â· 5.48:1 --gris-50 */
+  --gris-900:#1d2129;   /* texto principal Â· 16.13:1 */
   --navy-900:#14273b;   /* barra lateral */
   --navy-800:#1d3550;   /* hover en barra lateral */
-  --navy-700:#25476b;   /* paso activo en barra lateral · blanco 9.58:1 */
-  --navy-txt:#d8e1ec;   /* texto en barra lateral · 11.50:1 */
-  --navy-muted:#9fb1c5; /* texto secundario en barra lateral · 6.92:1 */
-  --navy-foco:#9fc3e6;  /* anillo de foco sobre la barra lateral · 8.26:1 */
+  --navy-700:#25476b;   /* paso activo en barra lateral Â· blanco 9.58:1 */
+  --navy-txt:#d8e1ec;   /* texto en barra lateral Â· 11.50:1 */
+  --navy-muted:#9fb1c5; /* texto secundario en barra lateral Â· 6.92:1 */
+  --navy-foco:#9fc3e6;  /* anillo de foco sobre la barra lateral Â· 8.26:1 */
 
   /* ---- Roles (lo que usan los componentes) ---- */
   --c-fondo:var(--gris-50);
@@ -82,15 +82,15 @@
   --bad:var(--rojo-600);
   --bad-soft:var(--rojo-50);
 
-  /* ---- Tipografía: pila del sistema (sin descargas, sin internet) ---- */
+  /* ---- TipografÃ­a: pila del sistema (sin descargas, sin internet) ---- */
   --f-texto:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
   --f-mono:"Cascadia Mono",Consolas,ui-monospace,"SF Mono",Menlo,monospace;
   --t-12:12px;   /* etiquetas de estado, pies, metadatos */
   --t-13:13px;   /* tablas, ayudas, etiquetas de campo */
   --t-14:14px;   /* cuerpo (base) */
-  --t-16:16px;   /* títulos de bloque (h3), botón grande, campos en móvil */
-  --t-20:20px;   /* título de pantalla en móvil, cifras */
-  --t-24:24px;   /* título de pantalla (h2) */
+  --t-16:16px;   /* tÃ­tulos de bloque (h3), botÃ³n grande, campos en mÃ³vil */
+  --t-20:20px;   /* tÃ­tulo de pantalla en mÃ³vil, cifras */
+  --t-24:24px;   /* tÃ­tulo de pantalla (h2) */
   --lh-tight:1.25;
   --lh-base:1.5;
   --w-normal:400;
@@ -108,29 +108,29 @@
 
   /* ---- Radios: solo dos ---- */
   --r-s:4px;     /* controles: botones, campos, etiquetas, chips, casillas */
-  --r-l:8px;     /* contenedores: bloques, tablas, zona de arrastre, diálogos */
+  --r-l:8px;     /* contenedores: bloques, tablas, zona de arrastre, diÃ¡logos */
   --r:var(--r-l);/* alias antiguo (antes 10px) */
 
-  /* ---- Bordes y elevación ---- */
+  /* ---- Bordes y elevaciÃ³n ---- */
   --borde:1px solid var(--c-borde);
   --borde-control:1px solid var(--c-borde-control);
-  --sombra-overlay:0 8px 24px rgba(20,39,59,.18); /* SOLO diálogo y aviso flotante (toast) */
+  --sombra-overlay:0 8px 24px rgba(20,39,59,.18); /* SOLO diÃ¡logo y aviso flotante (toast) */
   --foco:2px solid var(--c-foco);
   --foco-offset:2px;
 
-  /* ---- Tamaños ---- */
-  --toque:44px;          /* objetivo táctil mínimo en <=760px */
-  --control-h:36px;      /* altura de botón/campo en escritorio */
+  /* ---- TamaÃ±os ---- */
+  --toque:44px;          /* objetivo tÃ¡ctil mÃ­nimo en <=760px */
+  --control-h:36px;      /* altura de botÃ³n/campo en escritorio */
   --nav-w:240px;
   --contenido-max:1200px;
-  --icono:18px;          /* icono en línea con texto de 14px */
-  --icono-l:24px;        /* icono de pantalla de inicio y estados vacíos */
+  --icono:18px;          /* icono en lÃ­nea con texto de 14px */
+  --icono-l:24px;        /* icono de pantalla de inicio y estados vacÃ­os */
 
   /* ---- Capas ---- */
   --z-base:0;
   --z-sticky:10;   /* cabeceras de tabla, vista previa fija */
-  --z-nav:20;      /* barra de pasos en móvil */
-  --z-overlay:40;  /* fondo del diálogo (dialog usa top layer; queda como referencia) */
+  --z-nav:20;      /* barra de pasos en mÃ³vil */
+  --z-overlay:40;  /* fondo del diÃ¡logo (dialog usa top layer; queda como referencia) */
   --z-toast:50;
 
   /* ---- Movimiento ---- */
@@ -181,7 +181,7 @@ h3{font-size:var(--t-16);line-height:var(--lh-tight);font-weight:var(--w-bold);m
 .sw span{display:block;padding:var(--s-2)}
 .sw b{display:block;font-size:var(--t-13)}
 
-/* tipografía */
+/* tipografÃ­a */
 .tipo div{display:grid;grid-template-columns:90px 1fr;gap:var(--s-4);align-items:baseline;padding:var(--s-2) 0;border-bottom:var(--borde)}
 .tipo div:last-child{border:0}
 .tipo small{color:var(--c-texto-2);font-size:var(--t-12)}
@@ -257,7 +257,7 @@ tbody tr:last-child td{border-bottom:0}
 .prog i{display:block;height:100%;background:var(--azul-600);transition:width var(--dur)}
 .prog.fin i{background:var(--verde-600)}
 
-/* estados vacío / carga / error */
+/* estados vacÃ­o / carga / error */
 .estados{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--s-4)}
 .estado{border:var(--borde);border-radius:var(--r-l);background:var(--c-superficie);padding:var(--s-6) var(--s-5);text-align:center;display:flex;flex-direction:column;align-items:center;gap:var(--s-2)}
 .estado .ic-l{color:var(--c-texto-2)}
@@ -270,7 +270,7 @@ tbody tr:last-child td{border-bottom:0}
 @media (prefers-reduced-motion:reduce){.gira{animation:none}}
 .tag{font-size:var(--t-12);font-weight:var(--w-bold);color:var(--c-texto-2)}
 
-/* superposiciones: únicas con sombra */
+/* superposiciones: Ãºnicas con sombra */
 .toast{display:inline-flex;gap:var(--s-2);align-items:center;background:var(--navy-900);color:#fff;padding:var(--s-3) var(--s-4);border-radius:var(--r-l);box-shadow:var(--sombra-overlay)}
 .dlg{max-width:440px;background:var(--c-superficie);border-radius:var(--r-l);padding:var(--s-5);box-shadow:var(--sombra-overlay);border:var(--borde)}
 .dlg h3{margin-bottom:var(--s-2)}
@@ -339,7 +339,7 @@ nav .mob .btn:focus-visible{outline-color:var(--navy-foco)}
 </svg>
 <div class="app">
 <nav aria-label="Pasos">
-  <h1>Envío de certificados<small>y justificantes en lote</small></h1>
+  <h1>EnvÃ­o de certificados<small>y justificantes en lote</small></h1>
   <button class="step done"><span class="n"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Inicio<span class="sr"> (completado)</span></button>
   <button class="step done"><span class="n"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></span>Lista de personas<span class="sr"> (completado)</span></button>
   <button class="step" aria-current="step"><span class="n">2</span>Datos del evento</button>
@@ -352,8 +352,8 @@ nav .mob .btn:focus-visible{outline-color:var(--navy-foco)}
   </div>
 </nav>
 <main>
-  <h2>Sistema de diseño · muestra</h2>
-  <p class="lead">Página de validación de <code>tokens.css</code> e <code>iconos.svg</code>. Estrecha la ventana por debajo de 760 px para ver el comportamiento móvil.</p>
+  <h2>Sistema de diseÃ±o Â· muestra</h2>
+  <p class="lead">PÃ¡gina de validaciÃ³n de <code>tokens.css</code> e <code>iconos.svg</code>. Estrecha la ventana por debajo de 760 px para ver el comportamiento mÃ³vil.</p>
 
   <p class="sec-t">COLOR</p>
   <div class="card">
@@ -381,29 +381,29 @@ nav .mob .btn:focus-visible{outline-color:var(--navy-foco)}
     </div>
   </div>
 
-  <p class="sec-t">TIPOGRAFÍA Y ESPACIO</p>
+  <p class="sec-t">TIPOGRAFÃA Y ESPACIO</p>
   <div class="card tipo">
-    <div><small>24 · 600</small><span style="font-size:var(--t-24);font-weight:600;line-height:1.25">Revisar y enviar</span></div>
-    <div><small>20 · 600</small><span style="font-size:var(--t-20);font-weight:600;font-variant-numeric:tabular-nums">212 personas</span></div>
-    <div><small>16 · 600</small><span style="font-size:var(--t-16);font-weight:600">Firmas</span></div>
-    <div><small>14 · 400</small><span>Estos datos se usan en los documentos y en el correo con las variables entre llaves, por ejemplo <code>{evento}</code>.</span></div>
-    <div><small>13 · 400</small><span style="font-size:var(--t-13)" class="muted">Puedes escribir o corregir el correo y el DNI/NIE directamente en la tabla.</span></div>
-    <div><small>12 · 600</small><span style="font-size:var(--t-12);font-weight:600" class="muted">Versión 1.4.0</span></div>
+    <div><small>24 Â· 600</small><span style="font-size:var(--t-24);font-weight:600;line-height:1.25">Revisar y enviar</span></div>
+    <div><small>20 Â· 600</small><span style="font-size:var(--t-20);font-weight:600;font-variant-numeric:tabular-nums">212 personas</span></div>
+    <div><small>16 Â· 600</small><span style="font-size:var(--t-16);font-weight:600">Firmas</span></div>
+    <div><small>14 Â· 400</small><span>Estos datos se usan en los documentos y en el correo con las variables entre llaves, por ejemplo <code>{evento}</code>.</span></div>
+    <div><small>13 Â· 400</small><span style="font-size:var(--t-13)" class="muted">Puedes escribir o corregir el correo y el DNI/NIE directamente en la tabla.</span></div>
+    <div><small>12 Â· 600</small><span style="font-size:var(--t-12);font-weight:600" class="muted">VersiÃ³n 1.4.0</span></div>
   </div>
   <div class="card esp">
     <div><code>--s-1</code><i style="width:4px"></i>4</div><div><code>--s-2</code><i style="width:8px"></i>8</div>
     <div><code>--s-3</code><i style="width:12px"></i>12</div><div><code>--s-4</code><i style="width:16px"></i>16</div>
     <div><code>--s-5</code><i style="width:24px"></i>24</div><div><code>--s-6</code><i style="width:32px"></i>32</div>
     <div><code>--s-7</code><i style="width:48px"></i>48</div>
-    <div class="muted">Radios: <code>--r-s 4px</code> (controles) y <code>--r-l 8px</code> (contenedores). Sin sombras salvo diálogo y aviso flotante.</div>
+    <div class="muted">Radios: <code>--r-s 4px</code> (controles) y <code>--r-l 8px</code> (contenedores). Sin sombras salvo diÃ¡logo y aviso flotante.</div>
   </div>
 
-  <p class="sec-t">INICIO · OPCIONES COMO LISTA</p>
-  <div class="modos" role="group" aria-label="¿Qué quieres hacer?">
-    <button class="modo" aria-pressed="true"><svg class="ic ic-l" aria-hidden="true"><use href="#i-award"/></svg><div><strong>Crear certificados</strong><span>Certificados de asistencia o participación con vuestro diseño o plantilla.</span><small>Lista · Evento y firmas · Diseño · Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-file-text"/></svg><div><strong>Crear justificantes</strong><span>Sobre la plantilla oficial DECG, con DNI/NIE si hace falta.</span><small>Lista · Evento y firmas · Texto · Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-archive"/></svg><div><strong>Certificados ya creados</strong><span>Repartir los que os pasan hechos (ZIP del Vicerrectorado) sin tocarlos.</span><small>Excel · ZIP o PDF · Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-mail"/></svg><div><strong>Solo correo</strong><span>Un correo personalizado a cada persona, sin adjuntos.</span><small>Excel · Evento · Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+  <p class="sec-t">INICIO Â· OPCIONES COMO LISTA</p>
+  <div class="modos" role="group" aria-label="Â¿QuÃ© quieres hacer?">
+    <button class="modo" aria-pressed="true"><svg class="ic ic-l" aria-hidden="true"><use href="#i-award"/></svg><div><strong>Crear certificados</strong><span>Certificados de asistencia o participaciÃ³n con vuestro diseÃ±o o plantilla.</span><small>Lista Â· Evento y firmas Â· DiseÃ±o Â· Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-file-text"/></svg><div><strong>Crear justificantes</strong><span>Sobre la plantilla oficial DECG, con DNI/NIE si hace falta.</span><small>Lista Â· Evento y firmas Â· Texto Â· Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-archive"/></svg><div><strong>Certificados ya creados</strong><span>Repartir los que os pasan hechos (ZIP del Vicerrectorado) sin tocarlos.</span><small>Excel Â· ZIP o PDF Â· Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
+    <button class="modo" aria-pressed="false"><svg class="ic ic-l" aria-hidden="true"><use href="#i-mail"/></svg><div><strong>Solo correo</strong><span>Un correo personalizado a cada persona, sin adjuntos.</span><small>Excel Â· Evento Â· Correo</small></div><svg class="ic" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
   </div>
 
   <p class="sec-t">BOTONES</p>
@@ -414,11 +414,11 @@ nav .mob .btn:focus-visible{outline-color:var(--navy-foco)}
       <button class="btn"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg>Enviarme una prueba</button>
       <button class="btn"><svg class="ic" aria-hidden="true"><use href="#i-file-spreadsheet"/></svg>Descargar Excel actualizado</button>
       <button class="btn danger"><svg class="ic" aria-hidden="true"><use href="#i-circle-stop"/></svg>Detener</button>
-      <button class="btn" disabled>Probando…</button>
+      <button class="btn" disabled>Probandoâ€¦</button>
       <button class="btn icon" aria-label="Abrir carpeta"><svg class="ic" aria-hidden="true"><use href="#i-folder-open"/></svg></button>
     </div>
     <div class="row" style="margin-top:var(--s-4)">
-      <div class="seg" role="group" aria-label="Forma de envío"><button aria-pressed="true">Outlook de este ordenador</button><button aria-pressed="false">Gmail</button><button aria-pressed="false">Otro SMTP</button></div>
+      <div class="seg" role="group" aria-label="Forma de envÃ­o"><button aria-pressed="true">Outlook de este ordenador</button><button aria-pressed="false">Gmail</button><button aria-pressed="false">Otro SMTP</button></div>
     </div>
   </div>
 
@@ -426,30 +426,30 @@ nav .mob .btn:focus-visible{outline-color:var(--navy-foco)}
   <div class="card">
     <div class="grid">
       <label class="f">Nombre del evento o actividad<input type="text" value="Jornada de Bienvenida 2026"></label>
-      <label class="f">Fecha<input type="text" placeholder="12 de noviembre de 2026"><span class="help">Tal como saldrá en el documento.</span></label>
-      <label class="f">Columna con el correo<select><option>Correo electrónico</option><option>Correo UPV</option></select></label>
-      <label class="f">Responder a<input type="email" value="delegacion@epsg" aria-invalid="true" aria-describedby="e1"><span class="err" id="e1"><svg class="ic" aria-hidden="true" style="width:14px;height:14px"><use href="#i-circle-x"/></svg>Falta el dominio: escribe la dirección completa.</span></label>
+      <label class="f">Fecha<input type="text" placeholder="12 de noviembre de 2026"><span class="help">Tal como saldrÃ¡ en el documento.</span></label>
+      <label class="f">Columna con el correo<select><option>Correo electrÃ³nico</option><option>Correo UPV</option></select></label>
+      <label class="f">Responder a<input type="email" value="delegacion@epsg" aria-invalid="true" aria-describedby="e1"><span class="err" id="e1"><svg class="ic" aria-hidden="true" style="width:14px;height:14px"><use href="#i-circle-x"/></svg>Falta el dominio: escribe la direcciÃ³n completa.</span></label>
       <label class="f" style="grid-column:1/-1">Cuerpo del correo<textarea rows="3">Hola {nombre_pila}:
 Te adjuntamos el certificado de asistencia a {evento}.</textarea></label>
     </div>
-    <label class="chk"><input type="checkbox" checked> Poner nombres en formato «Nombre Apellido»</label>
+    <label class="chk"><input type="checkbox" checked> Poner nombres en formato Â«Nombre ApellidoÂ»</label>
     <div class="row"><span class="muted" style="font-size:var(--t-13)">Variables:</span><button class="chip">{nombre}</button><button class="chip">{nombre_pila}</button><button class="chip">{evento}</button><button class="chip">{fecha}</button><button class="chip">{cargos}</button></div>
   </div>
 
   <p class="sec-t">AVISOS Y ETIQUETAS DE ESTADO</p>
   <div class="card">
     <div class="note info"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><div>Si el Excel tiene una columna con el mismo nombre que una variable, manda el valor de cada persona.</div></div>
-    <div class="note ok" role="status"><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><div><b>Conexión correcta</b>Outlook enviará como delegacion@epsg.upv.es.</div></div>
-    <div class="note warn"><svg class="ic" aria-hidden="true"><use href="#i-triangle-alert"/></svg><div><b>Aviso: 3 personas sin correo</b>Se saltarán al enviar. Puedes escribir su correo en la tabla.</div></div>
-    <div class="note bad"><svg class="ic" aria-hidden="true"><use href="#i-circle-x"/></svg><div><b>Error: 2 correos no se han enviado</b>Revisa la dirección en la lista y pulsa «Reintentar fallidos».</div></div>
+    <div class="note ok" role="status"><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg><div><b>ConexiÃ³n correcta</b>Outlook enviarÃ¡ como delegacion@epsg.upv.es.</div></div>
+    <div class="note warn"><svg class="ic" aria-hidden="true"><use href="#i-triangle-alert"/></svg><div><b>Aviso: 3 personas sin correo</b>Se saltarÃ¡n al enviar. Puedes escribir su correo en la tabla.</div></div>
+    <div class="note bad"><svg class="ic" aria-hidden="true"><use href="#i-circle-x"/></svg><div><b>Error: 2 correos no se han enviado</b>Revisa la direcciÃ³n en la lista y pulsa Â«Reintentar fallidosÂ».</div></div>
     <div class="tbl" style="margin-top:var(--s-4)">
       <table>
         <thead><tr><th>Nombre</th><th>Correo</th><th>DNI/NIE</th><th>Estado</th><th>Motivo</th></tr></thead>
         <tbody>
-          <tr><td>Ana García López</td><td>ana.garcia@upv.es</td><td>12345678Z</td><td><span class="pill ok"><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Enviado</span></td><td></td></tr>
-          <tr><td>Marc Puig Soler</td><td></td><td>X1234567L</td><td><span class="pill warn"><svg class="ic" aria-hidden="true"><use href="#i-triangle-alert"/></svg>Sin correo</span></td><td>Se saltará</td></tr>
-          <tr><td>Lucía Pérez Martí</td><td>lucia.perez@upv.ess</td><td>87654321X</td><td><span class="pill bad"><svg class="ic" aria-hidden="true"><use href="#i-mail-x"/></svg>Rebotado</span></td><td>Dominio mal escrito</td></tr>
-          <tr><td>Jordi Ferrer Vidal</td><td>jordi.ferrer@upv.es</td><td>11223344B</td><td><span class="pill neu">Pendiente</span></td><td></td></tr>
+          <tr><td>Persona Demo Uno</td><td>persona.demo1@demo.invalid</td><td>DEMO-001</td><td><span class="pill ok"><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Enviado</span></td><td></td></tr>
+          <tr><td>Persona Demo Dos</td><td></td><td>DEMO-002</td><td><span class="pill warn"><svg class="ic" aria-hidden="true"><use href="#i-triangle-alert"/></svg>Sin correo</span></td><td>Se saltará</td></tr>
+          <tr><td>Persona Demo Tres</td><td>persona.demo3@dominio-mal-escrito.invalid</td><td>DEMO-003</td><td><span class="pill bad"><svg class="ic" aria-hidden="true"><use href="#i-mail-x"/></svg>Rebotado</span></td><td>Dominio mal escrito</td></tr>
+          <tr><td>Persona Demo Cuatro</td><td>persona.demo4@demo.invalid</td><td>DEMO-004</td><td><span class="pill neu">Pendiente</span></td><td></td></tr>
         </tbody>
       </table>
     </div>
@@ -458,22 +458,22 @@ Te adjuntamos el certificado de asistencia a {evento}.</textarea></label>
   <p class="sec-t">PROGRESO</p>
   <div class="card">
     <div class="stats"><div class="stat"><b>212</b>Total</div><div class="stat"><b>37</b>Hechos</div><div class="stat"><b>0</b>Fallos</div><div class="stat"><b>3 min</b>Restante</div></div>
-    <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="212" aria-valuenow="37" aria-label="Progreso del envío"><i style="width:17%"></i></div>
-    <p class="muted" style="margin:var(--s-2) 0 var(--s-4)">Enviando 37 de 212 · quedan unos 3 min</p>
+    <div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="212" aria-valuenow="37" aria-label="Progreso del envÃ­o"><i style="width:17%"></i></div>
+    <p class="muted" style="margin:var(--s-2) 0 var(--s-4)">Enviando 37 de 212 Â· quedan unos 3 min</p>
     <div class="prog fin"><i style="width:100%"></i></div>
     <p class="muted" style="margin:var(--s-2) 0 0">Enviados 212 de 212. Sin fallos.</p>
   </div>
 
-  <p class="sec-t">ESTADOS: VACÍO · CARGA · ERROR</p>
+  <p class="sec-t">ESTADOS: VACÃO Â· CARGA Â· ERROR</p>
   <div class="estados">
-    <div class="estado drop"><span class="tag">VACÍO</span><svg class="ic ic-l" aria-hidden="true"><use href="#i-upload"/></svg><h4>Todavía no hay ninguna lista</h4><p>Arrastra aquí el Excel o CSV con las personas (por ejemplo, la exportación de Microsoft Forms). Cada fila será un envío.</p><button class="btn">Elegir archivo</button></div>
-    <div class="estado" aria-live="polite"><span class="tag">CARGA</span><svg class="ic ic-l gira" aria-hidden="true"><use href="#i-loader-circle"/></svg><h4>Leyendo asistentes.xlsx…</h4><p>Detectando las columnas de nombre, correo y DNI/NIE.</p></div>
-    <div class="estado e-bad" role="alert"><span class="tag">ERROR</span><svg class="ic ic-l" aria-hidden="true"><use href="#i-circle-x"/></svg><h4>No se ha podido leer «lista.pdf»</h4><p>Usa un archivo .xlsx, .xls, .ods o .csv.</p><button class="btn">Elegir otro archivo</button></div>
+    <div class="estado drop"><span class="tag">VACÃO</span><svg class="ic ic-l" aria-hidden="true"><use href="#i-upload"/></svg><h4>TodavÃ­a no hay ninguna lista</h4><p>Arrastra aquÃ­ el Excel o CSV con las personas (por ejemplo, la exportaciÃ³n de Microsoft Forms). Cada fila serÃ¡ un envÃ­o.</p><button class="btn">Elegir archivo</button></div>
+    <div class="estado" aria-live="polite"><span class="tag">CARGA</span><svg class="ic ic-l gira" aria-hidden="true"><use href="#i-loader-circle"/></svg><h4>Leyendo asistentes.xlsxâ€¦</h4><p>Detectando las columnas de nombre, correo y DNI/NIE.</p></div>
+    <div class="estado e-bad" role="alert"><span class="tag">ERROR</span><svg class="ic ic-l" aria-hidden="true"><use href="#i-circle-x"/></svg><h4>No se ha podido leer Â«lista.pdfÂ»</h4><p>Usa un archivo .xlsx, .xls, .ods o .csv.</p><button class="btn">Elegir otro archivo</button></div>
   </div>
 
-  <p class="sec-t">SUPERPOSICIONES (ÚNICAS CON SOMBRA)</p>
+  <p class="sec-t">SUPERPOSICIONES (ÃšNICAS CON SOMBRA)</p>
   <div class="row" style="align-items:flex-start;gap:var(--s-5)">
-    <div class="dlg" role="dialog" aria-labelledby="dt"><h3 id="dt">¿Enviar 212 correos?</h3><p class="muted" style="margin:0 0 var(--s-4)">Se enviarán desde delegacion@epsg.upv.es. 3 personas sin correo se saltarán.</p><div class="row" style="justify-content:flex-end"><button class="btn">Cancelar</button><button class="btn pri">Enviar</button></div></div>
+    <div class="dlg" role="dialog" aria-labelledby="dt"><h3 id="dt">Â¿Enviar 212 correos?</h3><p class="muted" style="margin:0 0 var(--s-4)">Se enviarÃ¡n desde delegacion@epsg.upv.es. 3 personas sin correo se saltarÃ¡n.</p><div class="row" style="justify-content:flex-end"><button class="btn">Cancelar</button><button class="btn pri">Enviar</button></div></div>
     <div class="toast" role="status"><svg class="ic" aria-hidden="true"><use href="#i-circle-check"/></svg>Proyecto exportado</div>
   </div>
 
@@ -488,3 +488,4 @@ document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>b.parentNode.q
 </script>
 </body>
 </html>
+

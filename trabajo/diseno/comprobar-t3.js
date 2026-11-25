@@ -1,10 +1,10 @@
-// Comprobación T3: consola limpia, sin desbordamiento horizontal y capturas (Chrome headless + CDP). Uso: node tools/check-ui-t3.js <url> <carpeta-capturas> [prefijo]
+﻿// ComprobaciÃ³n T3: consola limpia, sin desbordamiento horizontal y capturas (Chrome headless + CDP). Uso: node tools/check-ui-t3.js <url> <carpeta-capturas> [prefijo]
 const { spawn } = require('child_process'); const fs = require('fs'); const os = require('os'); const path = require('path');
 const url = process.argv[2], out = process.argv[3], pref = process.argv[4] || 't3';
 const chrome = ['C:/Program Files/Google/Chrome/Application/chrome.exe','C:/Program Files (x86)/Google/Chrome/Application/chrome.exe'].find(fs.existsSync);
 const port = 9333, udd = fs.mkdtempSync(path.join(os.tmpdir(), 'chr-'));
 const T = String.fromCharCode(9);
-const PEGADO = [['Nombre','Apellidos','Correo','DNI'],['Ana','García López','ana@ejemplo.com','12345678Z'],['Luis','Pérez Gil','luis-sin-arroba',''],['Marta','Soler Vidal','marta@ejemplo.com','87654321X']].map((r) => r.join(T)).join(String.fromCharCode(10));
+const PEGADO = [['Nombre','Apellidos','Correo','DNI'],['Persona','Demo Uno','persona.demo1@demo.invalid','DEMO-001'],['Persona','Demo Dos','correo-sin-arroba',''],['Persona','Demo Tres','persona.demo3@demo.invalid','DEMO-003']].map((r) => r.join(T)).join(String.fromCharCode(10));
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 (async () => {
   const cp = spawn(chrome, ['--headless=new', '--disable-gpu', '--no-first-run', `--remote-debugging-port=${port}`, `--user-data-dir=${udd}`, 'about:blank'], { stdio: 'ignore' });
@@ -36,9 +36,10 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
       await ev(`document.querySelector('.step[data-go="3"]').click()`); await sleep(1500); await m('pantalla 3'); await shot(`${w}-p3-certificado`); }
     // dialogo y toast
     await ev(`toast('Aviso de ejemplo: cargado ana.xlsx'); 1`); await sleep(400); if (w !== 768) await shot(`${w}-toast`);
-    await ev(`confirmar('Enviar a 3 personas', '<p>Se enviarán 3 correos.</p>', 'Sí, enviar'); 1`); await sleep(400); if (w !== 768) await shot(`${w}-dialogo`);
+    await ev(`confirmar('Enviar a 3 personas', '<p>Se enviarÃ¡n 3 correos.</p>', 'SÃ­, enviar'); 1`); await sleep(400); if (w !== 768) await shot(`${w}-dialogo`);
     await ev(`document.getElementById('dlgNo').click()`);
   }
   console.log(res.join('\n')); console.log('ERRORES DE CONSOLA:', errs.length ? '\n' + errs.join('\n') : 'ninguno');
   ws.close(); cp.kill(); process.exit(errs.length ? 1 : 0);
 })();
+

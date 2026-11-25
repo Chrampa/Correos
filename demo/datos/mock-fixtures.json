@@ -1,0 +1,26 @@
+{
+  "config": {
+    "datos": {"nombre":"{Nombre} {Apellidos}","email":"Correo electrónico","dni":"DNI","capitalizar":false,"invertirComa":false},
+    "evento":{"evento":"Taller ficticio de demostración","fecha":"25 de noviembre de 2026","organizador":"Organización ficticia","lugar":"Aula de demostración","lugar_firma":"Ciudad ficticia","firmante":"Firmante de demostración","cargo_firmante":"Coordinación ficticia","firmante2":"","cargo_firmante2":""},
+    "smtp":{"preset":"outlook","host":"smtp.example.invalid","user":"cuenta@example.invalid","pass":"","recordar":false},
+    "correo":{"remitenteNombre":"Cuenta de demostración","remitenteEmail":"cuenta@example.invalid","responderA":"","cco":"","asunto":"Demostración: {evento}","cuerpo":"Hola {nombre}: este es un mensaje ficticio."},
+    "salida":{"carpeta":"Descargas de demostración"},"recursos":{"logo":null,"firma1":null,"firma2":null}
+  },
+  "hojas":[
+    {"hoja":"Vacía","columnas":[],"filas":[],"filaEncabezado":0},
+    {"hoja":"Personas","columnas":["Nombre","Apellidos","Correo electrónico","DNI"],"filaEncabezado":0,"filas":[
+      {"Nombre":"Persona Demo Uno","Apellidos":"Alfa","Correo electrónico":"demo1@example.invalid","DNI":"DEMO-001"},
+      {"Nombre":"Persona Demo Dos","Apellidos":"Beta","Correo electrónico":"demo2@example.invalid","DNI":"DEMO-002"},
+      {"Nombre":"Persona Demo Tres","Apellidos":"Gamma","Correo electrónico":"demo3@example.invalid","DNI":"DEMO-003"},
+      {"Nombre":"Persona Demo Cuatro","Apellidos":"Delta","Correo electrónico":"demo4@example.invalid","DNI":"DEMO-004"},
+      {"Nombre":"Persona Demo Cinco","Apellidos":"Épsilon","Correo electrónico":"","DNI":"DEMO-005"},
+      {"Nombre":"Persona Demo Seis","Apellidos":"Zeta","Correo electrónico":"correo-invalido","DNI":"DEMO-006"}
+    ]}
+  ],
+  "recibidos":[
+    {"archivo":"certificado-uno-demo.pdf","nombre":"Persona Demo Uno Alfa","dni":"DEMO-001","cargo":"Participante ficticio","horas":"3","creditos":"0.1"},
+    {"archivo":"certificado-dos-demo.pdf","nombre":"Persona Demo Dos Beta","dni":"","cargo":"Asistente ficticio","horas":"3","creditos":"0.1"},
+    {"archivo":"certificado-sin-asignar-demo.pdf","nombre":"Persona Demo Invitada","dni":"DEMO-007","cargo":"Invitada ficticia","horas":"2","creditos":"0"},
+    {"archivo":"certificado-error-demo.pdf","nombre":"","dni":"","cargo":"","horas":"","creditos":"","error":"Documento ilegible (simulado)"}
+  ]
+}
