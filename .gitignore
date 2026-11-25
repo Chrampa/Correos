@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+*.exe
+*.bin
+Entrega/
+trabajo/build/
+trabajo/extracted/
+trabajo/prueba/
+trabajo/diseno/capturas/
+node_modules/
+*.log
+*.xlsx
+!demo/**/*.xlsx
+Thumbs.db
+desktop.ini

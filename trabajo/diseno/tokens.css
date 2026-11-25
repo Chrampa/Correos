@@ -1,0 +1,134 @@
+/* =====================================================================
+   Envío de certificados · tokens de diseño  (v1, 2026-11-25)
+   Sustituye al bloque :root actual de ui/index.html.
+   - Los nombres antiguos (--bg --panel --ink --muted --line --soft --acc
+     --acc-ink --acc-soft --ok --ok-soft --warn --warn-soft --bad --bad-soft --r)
+     se conservan como alias, así que el CSS existente sigue funcionando.
+   - Contrastes comprobados (WCAG 2.1, fórmula de luminancia relativa):
+     ver trabajo/diseno/SISTEMA.md §3.
+   ===================================================================== */
+:root{
+  /* ---- Color base 1 · ACENTO (acciones, selección, foco, enlaces) ---- */
+  --azul-700:#183f63;   /* hover/pulsado del botón principal  · blanco encima 10.88:1 */
+  --azul-600:#1f4e79;   /* acento                              · blanco 8.66:1 · sobre --bg 7.94:1 */
+  --azul-800:#173b5c;   /* texto sobre --azul-50                · 9.90:1 */
+  --azul-50:#e8eef5;    /* fondo suave de selección / aviso informativo */
+
+  /* ---- Color base 2 · ESTADO (completado, correcto, progreso terminado) ---- */
+  --verde-600:#13704f;  /* «hecho», «enviado», paso completado · blanco 6.07:1 · sobre blanco 6.07:1 */
+  --verde-800:#0f5c41;  /* texto sobre --verde-50               · 7.01:1 */
+  --verde-50:#e6f3ed;
+
+  /* ---- Semánticos de aviso y error (solo para estados, nunca decoración) ---- */
+  --ambar-600:#8a5a00;  /* aviso · sobre --ambar-50 5.39:1 · sobre blanco ≈5.9:1 */
+  --ambar-800:#6b4600;  /* texto sobre --ambar-50 7.63:1 */
+  --ambar-50:#fdf3e1;
+  --rojo-600:#b42318;   /* error / acción destructiva · blanco 6.57:1 · sobre --rojo-50 5.75:1 */
+  --rojo-800:#8a1c12;   /* texto sobre --rojo-50 8.15:1 */
+  --rojo-50:#fdeceb;
+
+  /* ---- Neutros (gris ligeramente frío, a juego con el azul) ---- */
+  --gris-0:#ffffff;     /* superficie de paneles y campos */
+  --gris-25:#f7f8fa;    /* zona de arrastre, filas alternas */
+  --gris-50:#f4f5f7;    /* fondo de la aplicación */
+  --gris-75:#eef0f3;    /* cabecera de tabla, cifras */
+  --gris-100:#e1e4e9;   /* separadores (decorativos) */
+  --gris-300:#868e9a;   /* borde de campos y botones secundarios · 3.31:1 sobre blanco (WCAG 1.4.11) */
+  --gris-600:#5b6472;   /* texto secundario · 5.98:1 blanco · 5.48:1 --gris-50 */
+  --gris-900:#1d2129;   /* texto principal · 16.13:1 */
+  --navy-900:#14273b;   /* barra lateral */
+  --navy-800:#1d3550;   /* hover en barra lateral */
+  --navy-700:#25476b;   /* paso activo en barra lateral · blanco 9.58:1 */
+  --navy-txt:#d8e1ec;   /* texto en barra lateral · 11.50:1 */
+  --navy-muted:#9fb1c5; /* texto secundario en barra lateral · 6.92:1 */
+  --navy-foco:#9fc3e6;  /* anillo de foco sobre la barra lateral · 8.26:1 */
+
+  /* ---- Roles (lo que usan los componentes) ---- */
+  --c-fondo:var(--gris-50);
+  --c-superficie:var(--gris-0);
+  --c-superficie-2:var(--gris-75);
+  --c-texto:var(--gris-900);
+  --c-texto-2:var(--gris-600);
+  --c-borde:var(--gris-100);
+  --c-borde-control:var(--gris-300);
+  --c-acento:var(--azul-600);
+  --c-acento-hover:var(--azul-700);
+  --c-acento-suave:var(--azul-50);
+  --c-acento-texto:var(--azul-800);
+  --c-foco:var(--azul-600);
+
+  /* ---- Alias de compatibilidad con ui/index.html (no borrar) ---- */
+  --bg:var(--c-fondo);
+  --panel:var(--c-superficie);
+  --ink:var(--c-texto);
+  --muted:var(--c-texto-2);
+  --line:var(--c-borde);
+  --soft:var(--gris-75);
+  --acc:var(--azul-600);
+  --acc-ink:#ffffff;
+  --acc-soft:var(--azul-50);
+  --ok:var(--verde-600);
+  --ok-soft:var(--verde-50);
+  --warn:var(--ambar-600);
+  --warn-soft:var(--ambar-50);
+  --bad:var(--rojo-600);
+  --bad-soft:var(--rojo-50);
+
+  /* ---- Tipografía: pila del sistema (sin descargas, sin internet) ---- */
+  --f-texto:"Segoe UI Variable Text","Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --f-mono:"Cascadia Mono",Consolas,ui-monospace,"SF Mono",Menlo,monospace;
+  --t-12:12px;   /* etiquetas de estado, pies, metadatos */
+  --t-13:13px;   /* tablas, ayudas, etiquetas de campo */
+  --t-14:14px;   /* cuerpo (base) */
+  --t-16:16px;   /* títulos de bloque (h3), botón grande, campos en móvil */
+  --t-20:20px;   /* título de pantalla en móvil, cifras */
+  --t-24:24px;   /* título de pantalla (h2) */
+  --lh-tight:1.25;
+  --lh-base:1.5;
+  --w-normal:400;
+  --w-medium:500;
+  --w-bold:600;
+
+  /* ---- Espaciado: base 4 ---- */
+  --s-1:4px;
+  --s-2:8px;
+  --s-3:12px;
+  --s-4:16px;
+  --s-5:24px;
+  --s-6:32px;
+  --s-7:48px;
+
+  /* ---- Radios: solo dos ---- */
+  --r-s:4px;     /* controles: botones, campos, etiquetas, chips, casillas */
+  --r-l:8px;     /* contenedores: bloques, tablas, zona de arrastre, diálogos */
+  --r:var(--r-l);/* alias antiguo (antes 10px) */
+
+  /* ---- Bordes y elevación ---- */
+  --borde:1px solid var(--c-borde);
+  --borde-control:1px solid var(--c-borde-control);
+  --sombra-overlay:0 8px 24px rgba(20,39,59,.18); /* SOLO diálogo y aviso flotante (toast) */
+  --foco:2px solid var(--c-foco);
+  --foco-offset:2px;
+
+  /* ---- Tamaños ---- */
+  --toque:44px;          /* objetivo táctil mínimo en <=760px */
+  --control-h:36px;      /* altura de botón/campo en escritorio */
+  --nav-w:240px;
+  --contenido-max:1200px;
+  --icono:18px;          /* icono en línea con texto de 14px */
+  --icono-l:24px;        /* icono de pantalla de inicio y estados vacíos */
+
+  /* ---- Capas ---- */
+  --z-base:0;
+  --z-sticky:10;   /* cabeceras de tabla, vista previa fija */
+  --z-nav:20;      /* barra de pasos en móvil */
+  --z-overlay:40;  /* fondo del diálogo (dialog usa top layer; queda como referencia) */
+  --z-toast:50;
+
+  /* ---- Movimiento ---- */
+  --dur:150ms;
+  --ease:cubic-bezier(.2,0,0,1);
+}
+@media (prefers-reduced-motion:reduce){
+  :root{--dur:0ms}
+}
